@@ -959,11 +959,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\projects\\DynamicTable\\DynamicTable.Core\\DynamicTable.Core.csproj",
+      "projectUniqueName": "C:\\dev\\projects\\DynamicTableViewer\\DynamicTable.Core\\DynamicTable.Core.csproj",
       "projectName": "DynamicTable.Core",
-      "projectPath": "C:\\dev\\projects\\DynamicTable\\DynamicTable.Core\\DynamicTable.Core.csproj",
+      "projectPath": "C:\\dev\\projects\\DynamicTableViewer\\DynamicTable.Core\\DynamicTable.Core.csproj",
       "packagesPath": "C:\\Users\\Willy\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\projects\\DynamicTable\\DynamicTable.Core\\obj\\",
+      "outputPath": "C:\\dev\\projects\\DynamicTableViewer\\DynamicTable.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Willy\\AppData\\Roaming\\NuGet\\NuGet.Config",

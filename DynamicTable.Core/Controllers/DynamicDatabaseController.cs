@@ -3,6 +3,7 @@ using DynamicTable.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace DynamicTable.Core.Controllers
@@ -82,6 +83,52 @@ namespace DynamicTable.Core.Controllers
             catch (Exception ex)
             {
                 return BadRequest($"Error retrieving full table data: {ex.Message}");
+            }
+        }
+        
+        [HttpGet("{tableName}/export")]
+        public async Task<IActionResult> ExportTableData([FromQuery] string connectionString, string tableName)
+        {
+            var databaseService = new DatabaseService();
+            try
+            {
+                var data = await databaseService.GetTableDataWithColumnsAsync(connectionString, tableName, 1, int.MaxValue);
+        
+                var csv = new StringBuilder();
+        
+                // Add headers
+                var headers = data.Columns;
+                if (headers != null)
+                {
+                    csv.AppendLine(string.Join(",", headers));
+                }
+
+                // Add rows
+                foreach (var row in data.Rows)
+                {
+                    var values = headers.Select(header => (row as IDictionary<string, object>)[header]?.ToString());
+                    csv.AppendLine(string.Join(",", values));
+                }
+
+                return File(Encoding.UTF8.GetBytes(csv.ToString()), "text/csv", $"{tableName}.csv");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error exporting table data: {ex.Message}");
+            }
+        }
+        
+         [HttpPost("execute-query")]
+        public async Task<IActionResult> ExecuteQuery([FromQuery] string connectionString, [FromBody] string query)
+        {
+            try
+            {
+                var result = await _databaseService.ExecuteQueryAsync(connectionString, query);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error executing query: {ex.Message}");
             }
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CFI/iDHstBtza0lLXtzq6zPK4eApSYkGayd3e7l4244ONZSzeK17l0Q66q82RFbtHVI1/UYzmOY5FdYWZha6cQ==",
+  "dgSpecHash": "NQHkiR7vixuVyWG/uuObDzKzPjAUk87ZMeC83h1PwXT+Hjvq1ryvxM1kQohWQfWS2e8c86BokqTw2mVPwRTQ/A==",
   "success": true,
-  "projectFilePath": "C:\\dev\\projects\\DynamicTable\\DynamicTable.Core\\DynamicTable.Core.csproj",
+  "projectFilePath": "C:\\dev\\projects\\DynamicTableViewer\\DynamicTable.Core\\DynamicTable.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Willy\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
     "C:\\Users\\Willy\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.1\\microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",

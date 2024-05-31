@@ -83,5 +83,14 @@ namespace DynamicTable.Core.Services
                 };
             }
         }
+        
+        public async Task<IEnumerable<dynamic>> ExecuteQueryAsync(string connectionString, string query)
+        {
+            using (IDbConnection db = new SqlConnection(connectionString))
+            {
+                var result = await db.QueryAsync<dynamic>(query);
+                return result;
+            }
+        }
     }
 }
