@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DynamicTable.Core.props" />
+</Project>

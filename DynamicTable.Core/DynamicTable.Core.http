@@ -1,0 +1,6 @@
+@DynamicTable.Core_HostAddress = http://localhost:5033
+
+GET {{DynamicTable.Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
